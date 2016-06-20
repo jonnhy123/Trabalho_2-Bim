@@ -29,8 +29,6 @@ public class CadastroClientes extends JFrame {
 	private JTextField txtCelular;
 	private JButton btnSalvar;
 
-
-	Cliente c = new Cliente();
 	/**
 	 * Launch the application.
 	 */
@@ -160,7 +158,7 @@ public class CadastroClientes extends JFrame {
 		btnSalvar.addActionListener(new ActionListener() {
 
 			public void actionPerformed(ActionEvent e) {
-				c.setId(Integer.parseInt(txtId.getText()));
+//				c.setId(Integer.parseInt(txtId.getText()));
 //				c.setNome(txtNome.getText());
 //				c.setCep(txtCep.getText());
 //				c.setEstado(txtEstado.getText());
@@ -171,11 +169,27 @@ public class CadastroClientes extends JFrame {
 //				c.setComplemento(txtComplemento.getText());
 //				c.setTelefone(txtTelefone.getText());
 //				c.setCelular(txtCelular.getText());
-
 				
+				int id, numero;
+				String nome, endereco, complemento, bairro, cidade, estado, cep, telefone, celular;
+				
+				id = (Integer.parseInt(txtId.getText()));
+				nome = (txtNome.getText());
+				cep = (txtCep.getText());
+				estado = (txtEstado.getText());
+				cidade = (txtCidade.getText());
+				bairro = (txtBairro.getText());
+				endereco = (txtEndereco.getText());
+				numero = (Integer.parseInt(txtNumero.getText()));
+				complemento = (txtComplemento.getText());
+				telefone = (txtTelefone.getText());
+				celular = (txtCelular.getText());
 
-
-				JOptionPane.showMessageDialog(null, c.getId());
+				Controle control = new Controle();
+				control.salveSerializable(id, numero, nome, endereco, complemento, bairro, cidade, estado,
+						cep, telefone, celular);
+				
+				JOptionPane.showMessageDialog(null, id);
 
 			}
 		});
