@@ -5,7 +5,7 @@ import java.io.ObjectOutputStream;
 
 public class Controle {
 
-
+	
 	public void salveSerializable(int id, int numero, String nome, String endereco,
 			String	complemento, String bairro, String cidade, String estado, String cep,
 			String telefone,String celular ){
@@ -13,6 +13,7 @@ public class Controle {
 		 * Criamos o objeto Address na memória e setamos os valores
 		 * de seus atributos
 		 * */
+	
 		
 		Cliente c = new Cliente();
 		c.setId(id);
